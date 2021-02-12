@@ -1,0 +1,49 @@
+body {
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -70px -40px 0 -40px;
+    background-color: black;
+    height: 270px;
+    transform: rotate(3deg);
+}
+
+h1 {
+    font-family: 'Just Another Hand', cursive;
+    font-size: 6em;
+    letter-spacing: 3px;
+    text-align: center;
+    color: rgb(240, 193, 85);
+    text-shadow: -3px 3px rgb(85, 173, 240);
+    margin: auto;
+    transform: rotate(-3deg);
+    z-index: 10;
+}
+
+.blackContainer {
+    background-color: black;
+    height: 100px;
+    width: 750px;
+    position: absolute;
+    top: 75%;
+    left: -5%;
+    transform: rotate(-6deg);
+    z-index: 1;
+}
+
+.numberChoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+button:hover {
+    cursor: pointer;
+}

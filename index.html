@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
     <title>Générateur de citations</title>
 </head>
 <body>
-    <head>
-
-    </head>
+    <header>
+        <h1>Générateur de citations</h1>
+        <div class="blackContainer"></div>
+    </header>
     <main>
-
+        <div class="numberChoice">
+            <label for="numberChoice">Combien de citations faut il générer ?</label>
+            <input name="numberChoice" type="number" min="1" max="5" value="1" required>
+            <div class="buttons">
+                <button>Générateur 1</button>
+                <button>Générateur 2</button>
+            </div>
+        </div>
     </main>
     <footer>
-
+        
     </footer>
-
     <script src="app.js"></script>
 </body>
 </html>
