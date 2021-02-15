@@ -1,6 +1,7 @@
 body {
     margin: auto;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -11,6 +12,11 @@ header {
     background-color: black;
     height: 270px;
     transform: rotate(3deg);
+}
+
+main {
+    font-family: 'Just Another Hand', 'Roboto', sans-serif;
+    font-size: 2rem;
 }
 
 h1 {
@@ -44,6 +50,21 @@ h1 {
     margin-top: 5%;
 }
 
+label {
+    font-size: 2rem;
+}
+
+button {
+    font-family: 'Just Another Hand', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0);
+    
+}
+
 button:hover {
     cursor: pointer;
+    transition: box-shadow 300ms;
+    box-shadow: -3px 3px rgb(240, 193, 85);
 }
