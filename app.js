@@ -9,7 +9,7 @@ let generator = [
     {
       type: 'Le petit chaperon rouge',
       subjects: ['Le petit chaperon rouge', 'Le chasseur', 'Le loup'],
-      verbs: ['part visiter sa Grand mère', 'doit traverser le village en passant par la forêt', 'a déjà dévoré la grand-mère et a pris place dans son lit', 'tire la chevillette'],
+      verbs: ['part visiter sa grand mère', 'doit traverser le village en passant par la forêt', 'a déjà dévoré la grand-mère et a pris place dans son lit', 'tire la chevillette'],
       complements: ['avec une galette et un petit pot de beurre.', 'et se fait dévorer.', 'et la bobinette cherra.'],
     }
 ];
@@ -38,7 +38,6 @@ function appendChildren(parent, children) {
 
 document.getElementById('button_1').addEventListener('click', function() {
     blockquote = [];
-    console.log(blockquote);
     quotesList.innerHTML = '';
     chosenValue = document.getElementById('numberChoice').value;
 

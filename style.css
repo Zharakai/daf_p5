@@ -68,3 +68,8 @@ button:hover {
     transition: box-shadow 300ms;
     box-shadow: -3px 3px rgb(240, 193, 85);
 }
+
+blockquote {
+    border-left: rgb(240, 193, 85) solid 2px;
+    padding-left: 1%;
+}
