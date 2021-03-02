@@ -2,7 +2,7 @@
 let generator = [
     {
       type: "Reflet d'Acide",
-      subjects: ['Wrandrall', 'Zehirmahnn ', 'Zarakaï', 'Enoriel', 'Trichelieu', 'Guertrude'],
+      subjects: ['Wrandrall', 'Zehirmahnn', 'Zarakaï', 'Enoriel', 'Trichelieu', 'Guertrude'],
       verbs: ['se bat avec une épée rouillée', 'chante Pom... Pom pom', 'se bat avec une énorme hache', 'boit une pinte de bière bien fraîche'],
       complements: ['au bar.', 'avec sa fiancée.', 'avec ses compagnons.'],
     },
@@ -41,14 +41,20 @@ document.getElementById('button_1').addEventListener('click', function() {
     quotesList.innerHTML = '';
     chosenValue = document.getElementById('numberChoice').value;
 
-    for (let i = 0; i < chosenValue; i++) {
-        blockquote.push(createBlockQuote(`
-        ${generator[0].subjects[getRandomInt(generator[0].subjects.length)]} 
-        ${generator[0].verbs[getRandomInt(generator[0].verbs.length)]} 
-        ${generator[0].complements[getRandomInt(generator[0].complements.length)]}
-        `));
+    if (chosenValue > 0 && chosenValue < 6) {
+        for (let i = 0; i < chosenValue; i++) {
+            blockquote.push(createBlockQuote(`
+            ${generator[0].subjects[getRandomInt(generator[0].subjects.length)]} 
+            ${generator[0].verbs[getRandomInt(generator[0].verbs.length)]} 
+            ${generator[0].complements[getRandomInt(generator[0].complements.length)]}
+            `));
+        }
+        appendChildren(quotesList, blockquote);
+    } else if (isNaN(chosenValue)) {
+        window.alert("Ceci n'est pas un nombre.");
+    } else {
+        window.alert("Le nombre n'est pas compris entre 1 et 5.");
     }
-    appendChildren(quotesList, blockquote);
 });
 
 document.getElementById('button_2').addEventListener('click', function() {
@@ -56,12 +62,18 @@ document.getElementById('button_2').addEventListener('click', function() {
     quotesList.innerHTML = '';
     chosenValue = document.getElementById('numberChoice').value;
 
-    for (let i = 0; i < chosenValue; i++) {
-        blockquote.push(createBlockQuote(`
-        ${generator[1].subjects[getRandomInt(generator[1].subjects.length)]} 
-        ${generator[1].verbs[getRandomInt(generator[1].verbs.length)]} 
-        ${generator[1].complements[getRandomInt(generator[1].complements.length)]}
-        `));
+    if (chosenValue > 0 && chosenValue < 6) {
+        for (let i = 0; i < chosenValue; i++) {
+            blockquote.push(createBlockQuote(`
+            ${generator[1].subjects[getRandomInt(generator[1].subjects.length)]} 
+            ${generator[1].verbs[getRandomInt(generator[1].verbs.length)]} 
+            ${generator[1].complements[getRandomInt(generator[1].complements.length)]}
+            `));
+        }
+        appendChildren(quotesList, blockquote);
+    } else if (isNaN(chosenValue)) {
+        window.alert("Ceci n'est pas un nombre.");
+    } else {
+        window.alert("Le nombre n'est pas compris entre 1 et 5.");
     }
-    appendChildren(quotesList, blockquote);
 });
